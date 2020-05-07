@@ -12,5 +12,10 @@ public class Main {
       volvoFN12.load();
       volvoFN12.unLoad();
       volvoFN12.unLoad();
+      FamilyCar peugeotTraveler = new FamilyCar("Трэвелер",38150,"Navy_Blue",2017,Calendar.APRIL
+      ,26,Brand.PEUGEOT,"Minivan","disel",603,8,50000);
+      peugeotTraveler.foldSeat();
+      peugeotTraveler.installationOfAChildSeats();
+      peugeotTraveler.unFoldSeat();
     }
 }
