@@ -1,5 +1,5 @@
 package local;
 
 public interface Movable {
-    void move();
+    boolean move();
 }

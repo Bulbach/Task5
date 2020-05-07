@@ -8,7 +8,7 @@ public enum Brand {
     VOLVO("Вольво","Швеция", 1927,Calendar.APRIL,14),
     TOYOTA("Тойота","Япония",1937,Calendar.AUGUST,28),
     HONDA("Хонда","Япония",1948, Calendar.SEPTEMBER,24),
-    DODJE("Додж","США",1900,Calendar.NOVEMBER,14),
+    DODGE("Додж","США",1900,Calendar.NOVEMBER,14),
     PEUGEOT("Пежо","Франция",1896,Calendar.APRIL,2);
 
     private final String NAME;
