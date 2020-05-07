@@ -17,5 +17,9 @@ public class Main {
       peugeotTraveler.foldSeat();
       peugeotTraveler.installationOfAChildSeats();
       peugeotTraveler.unFoldSeat();
+      Movable Boeing = new Airplane("Пассажирский","Boeing747-400",362875
+              ,13430,660,270,3020,380_000_000);
+      ((Airplane)Boeing).takeOff(0,3500);
+      ((Airplane)Boeing).landing(970,3200);
     }
 }
