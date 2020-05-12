@@ -23,6 +23,7 @@ public class Main {
               ,13430,660,270,3020,380_000_000);
       ((Airplane)Boeing).takeOff(0,3500);
       ((Airplane)Boeing).landing(970,3200);
+      ((Airplane)Boeing).takeOff();
 
       Ship dryCargoShip = new Ship("Сухогруз","BergeStahl",342,63,23
                                   ,27610,365000,115_000_00);

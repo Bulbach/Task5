@@ -26,8 +26,15 @@ public class Airplane implements Movable {
         this.price = price;
     }
 
+    public void takeOff() {
+        takeOff(-1, -1);
+
+    }
+
     public void takeOff(int speed, int runwayLength) {
-        if ((runwayLength * 0.9) >= minimumRunwayLength) {
+        if (speed == -1 && runwayLength == -1) {
+            System.out.println("Параметры некоректны. Самолет не известен. Взлет запрещен!");
+        } else if ((runwayLength * 0.9) >= minimumRunwayLength) {
             while (speed < minimumSpeedTake_Off) {
                 speed += 50;
                 if (speed >= minimumSpeedTake_Off) {
