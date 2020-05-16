@@ -1,8 +1,11 @@
-package local;
+package local.Ships;
+
+import local.Interfaсe.Movable;
+import local.Store.Purchaseble;
 
 import java.util.Objects;
 
-public class Ship implements Movable {
+public class Ship implements Movable, Purchaseble {
 
     private String typeOfShip;
     private String name;
@@ -12,10 +15,10 @@ public class Ship implements Movable {
     private int powerEngine;
     private int carryingCapacity;
     private int price;
-    static boolean anchorInBoard = true ;
+    static boolean anchorInBoard = true;
 
     public Ship(String typeOfShip, String name, int shipLength, int shipWidth, int draftShip
-                , int powerEngine, int carryingCapacity, int price){
+            , int powerEngine, int carryingCapacity, int price) {
         this.typeOfShip = typeOfShip;
         this.shipLength = shipLength;
         this.shipWidth = shipWidth;
@@ -26,22 +29,20 @@ public class Ship implements Movable {
         this.price = price;
     }
 
-    public void raiseTheAnchor(int speed){
-        if (anchorInBoard && speed<=2){
+    public void raiseTheAnchor(int speed) {
+        if (anchorInBoard && speed <= 2) {
             System.out.println("Условия подходящие. Можно бросить якорь");
             anchorInBoard = false;
-        }
-        else {
+        } else {
             System.out.println("Слишком быстро. Притормози!");
         }
     }
 
 
-    public void lowerAnchor(){
-         if (anchorInBoard){
-             System.out.println("Якорь за бортом. Поднять якорь ");
-         }
-         else {
+    public void lowerAnchor() {
+        if (anchorInBoard) {
+            System.out.println("Якорь за бортом. Поднять якорь ");
+        } else {
             System.out.println("Не тупим. Полный вперед!");
         }
     }
@@ -51,32 +52,64 @@ public class Ship implements Movable {
         return typeOfShip;
     }
 
+    public void setTypeOfShip(String typeOfShip) {
+        this.typeOfShip = typeOfShip;
+    }
+
     public float getShipLength() {
         return shipLength;
+    }
+
+    public void setShipLength(int shipLength) {
+        this.shipLength = shipLength;
     }
 
     public float getShipWidth() {
         return shipWidth;
     }
 
+    public void setShipWidth(int shipWidth) {
+        this.shipWidth = shipWidth;
+    }
+
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getDraftShip() {
         return draftShip;
     }
 
+    public void setDraftShip(int draftShip) {
+        this.draftShip = draftShip;
+    }
+
     public int getPowerEngine() {
         return powerEngine;
+    }
+
+    public void setPowerEngine(int powerEngine) {
+        this.powerEngine = powerEngine;
     }
 
     public int getCarryingCapacity() {
         return carryingCapacity;
     }
 
+    public void setCarryingCapacity(int carryingCapacity) {
+        this.carryingCapacity = carryingCapacity;
+    }
+
     public int getPrice() {
         return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     @Override
@@ -87,7 +120,7 @@ public class Ship implements Movable {
     @Override
     public String toString() {
         StringBuilder out = new StringBuilder();
-         out.append("Ship{")
+        out.append("Ship{")
                 .append(", Name =").append(name)
                 .append("typeOfShip='").append(typeOfShip).append("'")
                 .append(", shipLength=").append(shipLength)
@@ -119,4 +152,6 @@ public class Ship implements Movable {
     public int hashCode() {
         return Objects.hash(typeOfShip, name, shipLength, shipWidth, draftShip, powerEngine, carryingCapacity, price);
     }
+
+
 }

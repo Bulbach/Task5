@@ -1,4 +1,7 @@
-package local;
+package local.Cars;
+
+import local.Cars.Brand;
+import local.Cars.Car;
 
 public class FamilyCar extends Car {
 
@@ -11,7 +14,7 @@ public class FamilyCar extends Car {
 
     public FamilyCar(String name, int number, String color, int year, int month, int day, Brand brand, String carBodyType
             , String engineType, int luggageBootVolume, int numberOfSeats, int price) {
-        super(name, number, color, day, month, year, brand);
+        super(name, number, color,price, day, month, year, brand);
         this.carBodyType = carBodyType;
         this.engineType = engineType;
         this.luggageBootVolume = luggageBootVolume;

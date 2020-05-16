@@ -1,6 +1,9 @@
-package local;
+package local.Cars;
 
-public class Truck extends Car{
+import local.Cars.Brand;
+import local.Cars.Car;
+
+public class Truck extends Car {
 
     private int carryingCapacity;
     private int enginePower;
@@ -8,9 +11,9 @@ public class Truck extends Car{
     private int price;
     private boolean loaded;
 
-    public Truck(String name, int number, String color,int year, int month, int day, Brand brand, int carryingCapacity
-                 , int enginePower,int fuelTankVolume,int price){
-        super(name, number, color, day, month, year, brand);
+    public Truck(String name, int number, String color, int year, int month, int day, Brand brand, int carryingCapacity
+            , int enginePower, int fuelTankVolume, int price) {
+        super(name, number, color,price, day, month, year, brand);
         this.carryingCapacity = carryingCapacity;
         this.enginePower = enginePower;
         this.fuelTankVolume = fuelTankVolume;
@@ -18,56 +21,54 @@ public class Truck extends Car{
         this.loaded = false;
     }
 
-    public void load(){
+    public void load() {
         if (loaded) {
             System.out.println("Машина загружена, погрузка невозможна");
-        }
-        else {
+        } else {
             loaded = true;
             System.out.println("Машина порожняя,погрузка начата");
         }
     }
 
-    public void unLoad(){
-        if (loaded){
+    public void unLoad() {
+        if (loaded) {
             System.out.println("Машина загружена , приступаем к выгрузке");
             loaded = false;
-        }
-        else {
+        } else {
             System.out.println("Машина порожняя. Выгружать нечего");
         }
     }
 
 
-    public void getCarryingCapacity(int carryingCapacity){
+    public void getCarryingCapacity(int carryingCapacity) {
         this.carryingCapacity = carryingCapacity;
     }
 
-    public int setCarryingCapacity(){
+    public int setCarryingCapacity() {
         return carryingCapacity;
     }
 
-    public void getEnginePower(int enginePower){
+    public void getEnginePower(int enginePower) {
         this.enginePower = enginePower;
     }
 
-    public int setEnginePower(){
+    public int setEnginePower() {
         return enginePower;
     }
 
-    public void getFuelTankVolume(int fuelTankVolume){
+    public void getFuelTankVolume(int fuelTankVolume) {
         this.fuelTankVolume = fuelTankVolume;
     }
 
-    public int setFuelTankVolume(){
+    public int setFuelTankVolume() {
         return fuelTankVolume;
     }
 
-    public void getPrise(int price){
+    public void getPrise(int price) {
         this.price = price;
     }
 
-    public int setPrice(){
+    public int setPrice() {
         return price;
     }
 

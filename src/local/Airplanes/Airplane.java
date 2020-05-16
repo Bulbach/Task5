@@ -1,8 +1,11 @@
-package local;
+package local.Airplanes;
+
+import local.Interfaсe.Movable;
+import local.Store.Purchaseble;
 
 import java.util.Objects;
 
-public class Airplane implements Movable {
+public class Airplane implements Movable, Purchaseble {
 
     private String typeOfAircraft;
     private String model;
@@ -14,7 +17,7 @@ public class Airplane implements Movable {
     private int minimumRunwayLength;
 
 
-    Airplane(String typeOfAircraft, String model, int maximumTake_OffWeight, int rangeOfFlight, int numberOfPassengers
+    public Airplane(String typeOfAircraft, String model, int maximumTake_OffWeight, int rangeOfFlight, int numberOfPassengers
             , int minimumSpeedTake_Off, int minimumRunwayLength, int price) {
         this.typeOfAircraft = typeOfAircraft;
         this.model = model;
@@ -62,32 +65,64 @@ public class Airplane implements Movable {
         return typeOfAircraft;
     }
 
+    public void setTypeOfAircraft(String typeOfAircraft) {
+        this.typeOfAircraft = typeOfAircraft;
+    }
+
     public String getModel() {
         return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
     }
 
     public int getMaximumTake_OffWeight() {
         return maximumTake_OffWeight;
     }
 
+    public void setMaximumTake_OffWeight(int maximumTake_OffWeight) {
+        this.maximumTake_OffWeight = maximumTake_OffWeight;
+    }
+
     public int getRangeOfFlight() {
         return rangeOfFlight;
+    }
+
+    public void setRangeOfFlight(int rangeOfFlight) {
+        this.rangeOfFlight = rangeOfFlight;
     }
 
     public int getNumberOfPassengers() {
         return numberOfPassengers;
     }
 
+    public void setNumberOfPassengers(int numberOfPassengers) {
+        this.numberOfPassengers = numberOfPassengers;
+    }
+
     public int getMinimumSpeedTake_Off() {
         return minimumSpeedTake_Off;
+    }
+
+    public void setMinimumSpeedTake_Off(int minimumSpeedTake_Off) {
+        this.minimumSpeedTake_Off = minimumSpeedTake_Off;
     }
 
     public int getMinimumRunwayLength() {
         return minimumRunwayLength;
     }
 
+    public void setMinimumRunwayLength(int minimumRunwayLength) {
+        this.minimumRunwayLength = minimumRunwayLength;
+    }
+
     public int getPrice() {
         return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     @Override
@@ -130,5 +165,11 @@ public class Airplane implements Movable {
     public int hashCode() {
         return Objects.hash(typeOfAircraft, model, maximumTake_OffWeight, rangeOfFlight, numberOfPassengers, price
                 , minimumSpeedTake_Off, minimumRunwayLength);
+    }
+
+    @Override
+    public String getName() {
+        String name;
+        return name = model;
     }
 }
