@@ -73,9 +73,8 @@ public abstract class Car implements Movable, Purchaseble {
         out.append("Car{").append("name='").append(name).append("'")
                 .append(", number=").append(number)
                 .append(", color='").append(color).append("'")
-                .append(", dateRelease=").append(dateRelease)
+                .append(", dateRelease=").append(getDateRelease())
                 .append(", brand=").append(brand)
-                .append(", DATE_FORMAT=").append(DATE_FORMAT)
                 .append('}');
         return out.toString();
     }

@@ -121,16 +121,16 @@ public class Ship implements Movable, Purchaseble {
     public String toString() {
         StringBuilder out = new StringBuilder();
         out.append("Ship{")
-                .append(", Name =").append(name)
-                .append("typeOfShip='").append(typeOfShip).append("'")
-                .append(", shipLength=").append(shipLength)
+                .append(", Name = ").append(name)
+                .append(" typeOfShip='").append(typeOfShip).append("'")
+                .append(", shipLength= ").append(shipLength)
                 .append(", shipWidth=").append(shipWidth)
                 .append(", draftShip=").append(draftShip)
                 .append(", powerEngine=").append(powerEngine)
                 .append(", carryingCapacity=").append(carryingCapacity)
                 .append(", price=").append(price)
                 .append('}');
-        return toString();
+        return out.toString();
     }
 
     @Override

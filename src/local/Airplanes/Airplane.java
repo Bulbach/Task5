@@ -143,7 +143,7 @@ public class Airplane implements Movable, Purchaseble {
                 .append(", minimumSpeedTake_Off=").append(minimumSpeedTake_Off)
                 .append(", minimumRunwayLength=").append(minimumRunwayLength)
                 .append('}');
-        return toString();
+        return out.toString();
     }
 
     @Override

@@ -7,7 +7,7 @@ public class Store<T extends Purchaseble> {
     int amountOfMoneyInBox;
     T[] productList;
 
-    Store(int amountOfMoney, T[] productList) {
+    public Store(int amountOfMoney, T[] productList) {
         this.productList = productList;
         this.amountOfMoneyInBox = amountOfMoney;
     }
@@ -88,7 +88,7 @@ public class Store<T extends Purchaseble> {
         productList = temp;
     }
 
-    public int getAmountOfMoney() {
+    public int getAmountOfMoneyInBox() {
         return amountOfMoneyInBox;
     }
 

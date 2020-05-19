@@ -81,4 +81,24 @@ public class Truck extends Car {
     public boolean brake() {
         return false;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder out = new StringBuilder();
+
+        out.append( "Truck{")
+                .append(", name='").append(name).append("'")
+                .append(", color='").append(color).append("'")
+                .append(", brand=").append(brand)
+                .append(", carryingCapacity=").append(carryingCapacity)
+                .append(", enginePower=").append(enginePower)
+                .append(", fuelTankVolume=").append(fuelTankVolume)
+                .append(", price=").append(price)
+                .append(", loaded=").append(loaded)
+                .append(", number=").append(number)
+                .append(", dateRelease=").append(getDateRelease())
+                .append(", price=").append(price)
+                .append('}');
+        return out.toString();
+    }
 }
